@@ -68,5 +68,5 @@ class X265Conan(ConanFile):
                 tools.replace_in_file(os.path.join(self.package_folder,"lib","pkgconfig","x265.pc"),s,r)
 
     def package_info(self):
-        self.cpp_info.libs = ["hello"]
+        self.cpp_info.libs = tools.collect_libs(self)
 
